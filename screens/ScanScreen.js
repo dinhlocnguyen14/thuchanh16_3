@@ -27,7 +27,10 @@ export default function ScanScreen({ navigation }) {
           <Text style={styles.title}>Orange Juice</Text>
         </View>
 
-        <TouchableOpacity style={styles.addBtn}>
+        <TouchableOpacity
+          style={styles.addBtn}
+          onPress={() => navigation.navigate("Cart")}
+        >
           <Text style={{ fontSize: 28, color: "#fff" }}>+</Text>
         </TouchableOpacity>
       </View>

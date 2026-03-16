@@ -4,6 +4,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import HomeScreen from "./screens/HomeScreen";
 import ScanScreen from "./screens/ScanScreen";
+import CartScreen from "./screens/CartScreen";
+import CheckoutScreen from "./screens/CheckOutScreen";
+import PaymentSuccessScreen from "./screens/PaymentSuccesScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +25,17 @@ export default function App() {
           component={ScanScreen}
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name="Cart"
+          component={CartScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Checkout"
+          component={CheckoutScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen name="Success" component={PaymentSuccessScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
